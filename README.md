@@ -42,7 +42,7 @@ Each cell was assigned a putative cell-cycle phase label using [Seurat V3's](htt
 
 **Figures and Tables**
 
-All of the tables and figures from this manuscript are available in ./results and can be recreated by running:
+All of the tables and figures from this manuscript are available in `results` and can be recreated by running:
 
 `$ Rscript ./run/figure1_plots.R`
 
