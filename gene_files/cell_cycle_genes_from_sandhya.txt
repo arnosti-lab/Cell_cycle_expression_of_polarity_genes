@@ -1,0 +1,15 @@
+Gene	cc.phase
+Mcm7	S.phase
+Claspin	S.phase
+PCNA	S.phase
+String	S.phase
+dap	S.phase
+CycB	G2M.phase
+ct	G2M.phase
+PCB	G2M.phase
+jumu	G2M.phase
+E(spl)m7-HLH	G1.arrest
+E(spl)m8-HLH	G1.arrest
+E(spl)mgamma-HLH	G1.arrest
+E(spl)m4-BFM	G1.arrest
+
