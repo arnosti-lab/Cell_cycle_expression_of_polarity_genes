@@ -2,7 +2,7 @@
 Sandhya Payankaulam , Stephanie L. Hickey, and David N. Arnosti
 ##
 
-This repository contains the single cell data and results generated in this study as well as the code necessary for reproducing all of the analyses in figure 1, .
+This repository contains the results generated in this study as well as the code necessary for reproducing all of the analyses in figure 1 and the supplemental figures.
 
 ### Data
 The WT Drosophila Wing imaginal disc 10x scRNA-seq data generated and described in Deng *et. al.* 2019 can be fond [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSM3902311). The early Drosophila embryo Drop-seq data generated and described in Karaiskos et. al. 2017 can be found [here](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi). 
@@ -12,6 +12,8 @@ The WT Drosophila Wing imaginal disc 10x scRNA-seq data generated and described 
 The specific data used in this study can be downloaded from GEO by running:
 
 `$ sh ./run/download_data.sh`
+
+`download_data.sh` creates a `Raw_data` to contain the downloaded files.
 
 ### Analysis
 
@@ -26,7 +28,7 @@ The data was preprocessed and normalized using:
 
 `$ Rscript ./run/preprocess.R`
 
-`preprocess.R` outputs the contents of the `normalized_data` directory which contains R objects with normalized gene expression matrices.
+`preprocess.R` creates a `normalized_data` directory which contains R objects with normalized gene expression matrices.
 
 **Phase assignment**
 
@@ -34,8 +36,8 @@ Each cell was assigned a putative cell-cycle phase label using [Seurat V3's](htt
 
 `$ Rscript ./run/phase_assignment.R`
 
-`phase_assignment.R` outputs:
-- `20200922_genes_of_interest_detected_in_dataset.csv`, a table that lists the labels for polarity and cell-cycle genes and whether or not they are expressed in a particular single-cell data set. 
+`phase_assignment.R` creates a results folder and outputs:
+- `results/20200922_genes_of_interest_detected_in_dataset.csv`, a table that lists the labels for polarity and cell-cycle genes and whether or not they are expressed in a particular single-cell data set. 
 - Seurat objects that contain the phase assignments for each cell in the @meta.data slot
 
 **Figures and Tables**
